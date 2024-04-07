@@ -1,0 +1,35 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title": "Novo Evento",
+    "details": null,
+    "maximumAttendees": 1
+}
+
+###
+
+POST http://localhost:3333/events/64afe5b9-ef50-49c5-8702-7801e2381061/attendees
+Content-Type: application/json
+
+{
+    "name": "Felipe",
+    "email": "felipe2@gmail.com"
+}
+
+###
+
+GET http://localhost:3333/events/64afe5b9-ef50-49c5-8702-7801e2381061
+
+###
+
+GET http://localhost:3333/attendees/2/badge
+
+
+###
+
+GET http://localhost:3333/attendees/2/check-in
+
+###
+
+GET http://localhost:3333/events/64afe5b9-ef50-49c5-8702-7801e2381061/attendees?query=feli
